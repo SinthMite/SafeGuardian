@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 100%;
+
+    .logo {
+        /* Add logo styles here */
+    }
+
+    .menu {
+        ul {
+            display: flex;
+            gap: 2rem;
+            list-style-type: none;
+            font-weight: 200;
+        }
+
+        ul li {
+            display: inline-block;
+            margin-right: 20px;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 0; /* Initially set to zero */
+                height: 1px;
+                background-color: white;
+                transition: width 0.3s ease-in-out; /* Transition property added here */
+            }
+
+            &:hover::after {
+                width: 100%; /* Change width on hover */
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .menu {
+            display: none; /* Hide the menu when screen width is below 768px */
+        }
+    }
+}

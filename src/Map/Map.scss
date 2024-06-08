@@ -1,0 +1,17 @@
+.map-container {
+    position: relative;
+    height: 400px; /* Adjust height as needed */
+    z-index: 0; /* Set a lower z-index */
+}
+
+.leaflet-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: auto; /* Reset z-index to its default value */
+}
+.leaflet-touch-zoom{
+    touch-action:auto;
+}

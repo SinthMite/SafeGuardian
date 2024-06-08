@@ -1,0 +1,47 @@
+.Poster {
+    position: absolute;
+    z-index: 1000;
+
+    h1 {
+        font-size: calc(3vw + 3vh); /* Example: font size increases with viewport size */
+        
+    }
+
+
+    .input-group {
+        display: flex;
+
+        form{
+            width: 100%;
+            padding: 2rem;
+            /* From https://css.glass */
+background: rgba(255, 255, 255, 0.11);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.6px);
+-webkit-backdrop-filter: blur(9.6px);
+border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        input {
+            border-radius: 20px;
+            border: none;
+            padding: 10px;
+            margin-right: 10px;
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            border: 1px solid rgba(255, 255, 255, 1);
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .submit-btn {
+            background-color: lightpink; // light pink color
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
