@@ -1,13 +1,16 @@
-import { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 import './App.scss';
-import Header from './Header/Header.jsx';
-import Poster from './Home/Poster/Poster.jsx';
+import Header from './Header/Header.js';
+import Poster from './Home/Poster/Poster.tsx';
 import Phone from './assets/Phone.png';
-import LowerBody from './Home/LowerBody/LowerBody.jsx';
-import Map from './Map/Map.jsx';
-import CommunityResources from './CommunityResources/CommunityResources.jsx'
-function App() {
+import LowerBody from './Home/LowerBody/LowerBody.tsx';
+import Map from './Map/Map.js';
+import CommunityResources from './CommunityResources/CommunityResources.tsx'
+
+
+interface AppProps {}
+
+const App: React.FC<AppProps> = () => {
   return (
     <>
       <section className='HomePageUpper'>

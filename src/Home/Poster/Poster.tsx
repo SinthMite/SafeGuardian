@@ -1,7 +1,9 @@
 import React from 'react';
 import './Poster.scss';
 
-export default function Poster() {
+interface PosterProps {}
+
+const Poster: React.FC<PosterProps> = () => {
     return (
         <div className="Poster">
             <h1>SafeGuardian</h1>
@@ -14,3 +16,5 @@ export default function Poster() {
         </div>
     );
 }
+
+export default Poster;

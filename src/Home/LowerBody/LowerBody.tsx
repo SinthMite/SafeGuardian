@@ -1,9 +1,10 @@
-import react from 'react'
-import './LowerBody.scss'
+import React from 'react';
+import './LowerBody.scss';
 
+interface LowerBodyProps {}
 
-export default function LowerBody(){
-    return(
+const LowerBody: React.FC<LowerBodyProps> = () => {
+    return (
         <div className="LowerBody">
             <form action="">
                 <div className='zipcodeDiv'>
@@ -11,7 +12,7 @@ export default function LowerBody(){
                     <input type="submit" value="Search" className="submit-btn" />
                 </div>
                 <div className='OffenseDiv'>
-                <input list="browsers" />
+                    <input list="browsers" />
                     <datalist id="browsers">
                         <option value="Edge"/>
                         <option value="Chrome"/>
@@ -23,5 +24,7 @@ export default function LowerBody(){
                 </div>
             </form>
         </div>
-    )
-}
+    );
+};
+
+export default LowerBody;
