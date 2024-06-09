@@ -1,9 +1,13 @@
 // Header.jsx
 import React from 'react';
 import './Header.scss';
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function Header() {
+interface HeaderProps{
+
+}
+
+const Header: React.FC<HeaderProps>=()=> {
     return (
         <div className="header">
             <div className="logo">
@@ -13,11 +17,13 @@ export default function Header() {
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/CommunityResources">Community Resources</Link></li>
-                    <li><Link to="/">FeedBack</Link></li>
-                    <li><Link to="/">Login</Link></li>
-                    <li><Link to="/">About</Link></li>
+                    <li><Link to="/FeedBack">FeedBack</Link></li>
+                    <li>Login</li>
+                    <li><Link to="/About">About</Link></li>
                 </ul>
             </div>
         </div>
     );
 }
+
+export default Header;

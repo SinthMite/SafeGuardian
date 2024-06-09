@@ -5,10 +5,16 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import 'leaflet-defaulticon-compatibility';
 import './Map.scss'; // Import CSS file
 
-export default function Map() {
+interface MapProps{
+    center: [number, number];
+    zoom: number;
+    scrollWheelZoom: boolean;
+}
+
+const Map: React.FC<MapProps>=()=>{
     return (
         <div className="map-container">
-            <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
+            <MapContainer center = {[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
                 <TileLayer
                     url='https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png'
                 />
@@ -21,3 +27,5 @@ export default function Map() {
         </div>
     );
 }
+
+export default Map;

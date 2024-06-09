@@ -1,7 +1,9 @@
 import React from 'react';
 import './LowerBody.scss';
 
-interface LowerBodyProps {}
+interface LowerBodyProps {
+    
+}
 
 const LowerBody: React.FC<LowerBodyProps> = () => {
     return (
